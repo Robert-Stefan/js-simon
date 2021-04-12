@@ -32,6 +32,8 @@ display = alert('I numeri da ricordare sono: ' + numberList);
 
 //FUNCTION 30 SEC. 
 setTimeout(function(){
+
+    
     for(i = 0; i < 5; i++) {
     utente = parseInt(prompt('Inserisci i numeri che hai visto precedentemente: '));
     numeriutente.push(utente);
@@ -42,7 +44,8 @@ setTimeout(function(){
     if (numberList.includes(utente) ) {
         console.log('Complimenti hai indovinato tutti i numeri!!!');
     } else {
-        console.log('Peccato hai indovinato solo ' + numeriutente.length);
+        
+        console.log('Peccato hai indovinato solo ' + numeriuguali() );
     }
 
 }, 3000)
@@ -58,6 +61,9 @@ function getRandomNumber(min, max) {
     return Math.floor( Math.random() * (max - min + 1) ) + min;
 }
 
-
-
+function numeriuguali(numeriutente) {
+    if (numeriutente === numberList.includes() ) {
+        console.log(numeriutente);
+    }
+}
  });
