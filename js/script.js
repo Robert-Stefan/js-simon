@@ -13,6 +13,7 @@ var numeriutente = [];
 var size = 5;
 var numberList = [];
 var display;
+var verifico = [];
 
 
 /**
@@ -21,36 +22,39 @@ var display;
 while(numberList.length < size) {
     var number = getRandomNumber(1, 100);
 
-    //Check unique number on list
+    //Check numero univoco
     if(! numberList.includes(number)) {
         numberList.push(number);
     } 
 
 }
+
+//Mostro i numeri
 console.log(numberList);
 display = alert('I numeri da ricordare sono: ' + numberList);
 
 //FUNCTION 30 SEC. 
 setTimeout(function(){
 
-    
+    //Inserisco numeri utente
     for(i = 0; i < 5; i++) {
     utente = parseInt(prompt('Inserisci i numeri che hai visto precedentemente: '));
     numeriutente.push(utente);
     } 
-    
     console.log (numeriutente);
 
-    if (numberList.includes(utente) ) {
-        console.log('Complimenti hai indovinato tutti i numeri!!!');
-    } else {
-        
-        console.log('Peccato hai indovinato solo ' + numeriuguali() );
-    }
+    //Verifico i numeri
+    for( i = 0; i < numberList.length; i++) {
 
+        if (numberList.includes(numeriutente[i]) ) {
+            verifico.push(numeriutente[i]);
+        } 
+}
+
+//OUTPUT
+console.log('Hai indovinato ' + verifico.length + ' numeri su ' + numberList.length);
+console.log('Hai indovinato i seguenti numeri: ' + verifico + '! ' + 'I numeri casuali erano: ' + numberList );
 }, 3000)
-
-
 
 
 /**
@@ -61,9 +65,4 @@ function getRandomNumber(min, max) {
     return Math.floor( Math.random() * (max - min + 1) ) + min;
 }
 
-function numeriuguali(numeriutente) {
-    if (numeriutente === numberList.includes() ) {
-        console.log(numeriutente);
-    }
-}
  });
