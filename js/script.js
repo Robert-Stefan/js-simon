@@ -19,6 +19,7 @@ var verifico = [];
 /**
  * Generare 5 numeri univoci casualmente
  */
+
 while(numberList.length < size) {
     var number = getRandomNumber(1, 100);
 
@@ -54,7 +55,7 @@ setTimeout(function(){
 //OUTPUT
 console.log('Hai indovinato ' + verifico.length + ' numeri su ' + numberList.length);
 console.log('Hai indovinato i seguenti numeri: ' + verifico + '! ' + 'I numeri casuali erano: ' + numberList );
-}, 3000)
+}, 30000)
 
 
 /**
@@ -65,4 +66,4 @@ function getRandomNumber(min, max) {
     return Math.floor( Math.random() * (max - min + 1) ) + min;
 }
 
- });
+});
